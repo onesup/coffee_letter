@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  email: MyString
+  crypted_password: MyString
+  salt: MyString
+  sender_name: MyString
+  sender_address: MyString
+  sender_phone: MyString
+  receiver_phone: MyString
+  receiver_address: MyString
+  receiver_phone: MyString
+  content: MyString
+  express: MyString
+  paper_id: 1
+
+two:
+  user_id: 1
+  email: MyString
+  crypted_password: MyString
+  salt: MyString
+  sender_name: MyString
+  sender_address: MyString
+  sender_phone: MyString
+  receiver_phone: MyString
+  receiver_address: MyString
+  receiver_phone: MyString
+  content: MyString
+  express: MyString
+  paper_id: 1
