@@ -4,11 +4,196 @@
   <title>CoffeeLetter</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+	<!--[if lte IE 9]>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100' type='text/css' /> 
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300' type='text/css' /> 
+	<![endif]-->
+	
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+	<div class="box" style="display: none;">커피레터.<br>커피레터.</div>
+	<div class="menubar" style="background-color: rgb(238, 238, 238);"><div class="logo"></div>
+		<ul class="menu">
+			<li><a href="/#top">커피레터</a></li>
+			<li><a href="/#screen-02">커피레터</a></li>
+			<li><a href="/#screen-03">커피레터</a></li>
+			<li><a href="/#screen-04">커피레터</a></li>
+			<li><a href="/#screen-05">커피레터</a></li>
+		</ul>
+	</div>
+	<div id="screen-01">
+				<div class="sloganbox">
+			<span class="slogan">커피레터.</span><br>
+			<span class="slogan">커피레터.</span>
+		</div>
+				<ul class="bg-slideshow" id="top">
+    		<li>
+    			<span class="image01">Image 01</span>
+    		</li>
+		</ul>
+	</div>
+	<div class="screen-wrapper">
+		<div id="screen-02">
+			<div class="headingbox padding-sc02">
+				<img src="./images/gabeln.svg" class="gabel-icon">
+				<br>
+				<span class="heading">커피레터.커피레터.</span>
+				<div class="linie"></div>
+			</div>
+
+			<div class="col-1">
+				<p class="text hyphenate">커피레터.커피레터.커피레터.커피레터.
+				</p>
+			</div>
+			<div class="kreuze-4"></div>
+		</div>
+
+		<div id="screen-03">
+			<div class="headingbox padding-sc03">
+				<span class="heading">커피레터.커피레터.커피레터.</span>
+				<div class="linie"></div>
+			</div>
+
+			<div class="colbox-4">
+				<div class="col-4">
+					<img src="./images/kreuz.png"><br>
+					<span class="subheading">Web</span>
+					<p class="text hyphenate">커피레터.커피레터.커피레터.</p>
+				</div>
+				<div class="col-4">
+					<img src="./images/kreuz.png"><br>
+					<span class="subheading">Print</span>
+					<p class="text hyphenate">커피레터.커피레터.커피레터.</p>
+				</div>
+				<div class="col-4">
+					<img src="./images/kreuz.png"><br>
+					<span class="subheading">Logos</span><br>
+					<p class="text hyphenate">커피레터.커피레터.커피레터.</p>
+				</div>
+				<div class="col-4">
+					<img src="./images/kreuz.png"><br>
+					<span class="subheading">Branding</span><br>
+					<p class="text hyphenate">커피레터.커피레터.커피레터.</p>
+				</div>
+				<div class="clearing"></div>
+				<div class="col-4 icons">
+					<img src="./images/screen.svg" class="angebot-icon">
+				</div>
+				<div class="col-4 icons">
+					<img src="./images/print.svg" class="angebot-icon">
+				</div>
+				<div class="col-4 icons">
+					<img src="./images/logos.svg" class="angebot-icon">
+				</div>
+				<div class="col-4 icons">
+					<img src="./images/branding.svg" class="angebot-icon">
+				</div>
+				<div class="clearing"></div>
+			</div>
+		</div>
+
+		<div id="screen-04">
+			<div class="headingbox padding-sc04">
+				<span class="headingbw">커피레터.커피레터.커피레터.커피레터.</span>
+			</div>
+			<div class="linie"></div>
+
+			<div class="col-1">
+				<p class="textbw hyphenate">
+					커피레터.커피레터.커피레터.커피레터.
+				</p>
+			</div>
+				<div class="colbox-2">
+					<div class="col-2">
+						<a href="/"><span class="names">커피레터.커피레터.커피레터.</span></a>
+						<br>
+						<a href="/"><img src="./images/christian.jpg"></a><br>
+
+						<div class="linie-left"></div>
+						<p class="textbw">ceo@moncl.net</p>
+						<a class="link" href="/">커피레터.커피레터.</a>
+					</div>
+					<div class="col-2">
+						<a href="/"><span class="names">커피레터.커피레터.</span></a>
+						<br>
+						<a href="/"><img src="./images/thomas.jpg"></a><br>
+	
+						<div class="linie-left"></div>
+						<p class="textbw">ceo@moncl.net</p>
+						<a class="link" href="/">커피레터.커피레터.</a>
+					</div>
+				</div>
+				<div class="clearing"></div>
+		</div>
+			<div id="screen-05">
+				<div class="headingbox padding-sc05">
+					<span class="heading">커피레터.커피레터.</span>
+				</div>
+				<div class="linie"></div>
+					<div class="colbox-2">
+						<div class="col-2">
+							<span class="subheading-kontakt">커피레터.커피레터.커피레터.</span><br>
+							<p class="text hyphenate">
+							커피레터.커피레터.커피레터.<br><br>
+							</p>
+							<span class="subheading-kontakt">커피레터.커피레터.커피레터.</span><br>
+								<p class="text-kontakt">
+									<span class="kontakt-label">Adresse:</span> 난향동<br>
+									<span class="kontakt-label">Telefon:</span> 0151 - 40510066<br>
+									<span class="kontakt-label">E-Mail:</span> ceo@moncl.net
+								</p>						
+							<span class="subheading-kontakt">커피레터.커피레터.커피레터.</span><br>
+								<p class="text-kontakt">
+									<span class="kontakt-label">Adresse:</span> 자양동<br>
+									<span class="kontakt-label">Telefon:</span> 0172 - 5429565<br>
+									<span class="kontakt-label">E-Mail:</span> wasabi@moncl.net
+								</p>
+						</div>
+						<div class="col-2">
+							<form action="/mail.php" method="post">
+								<div>
+									<label>
+										<span class="formtext">Name</span>
+										<input id="name" type="text" name="name">
+									</label>
+									<label>
+										<span class="formtext">E-Mail</span>
+										<input id="email" type="text" name="email">
+									</label>
+									<label>
+										<span class="formtext">쓰고싶은말</span>
+										<textarea id="anliegen" name="anliegen"></textarea>
+									</label>
+									<label>
+										<input type="submit" value="보내기" name="submit" id="submit">
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="clearing"></div>
+					<div class="img_zeile">
+						<a href="" target="_blank" id="twitter-icon">
+							<img src="./images/twitter.svg" title="twitter">
+						</a>
+						<a href="mailto:ceo@moncl.net" target="_blank" id="email-icon">
+							<img src="./images/gabelkreis.svg">
+						</a>
+						<a href="http://www.facebook.com/coffeeletter" target="_blank" id="fb-icon">
+							<img src="./images/facebook.svg">
+						</a>
+					</div>
+				<div class="col-1 linkschw">
+					<a href="/impressum/index.html">커피레터.</a>
+				</div>
+			</div>
+	</div>
+
+
 
 </body>
 </html>
