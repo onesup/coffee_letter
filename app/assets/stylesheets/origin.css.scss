@@ -1,23 +1,10 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-
-
- */
-
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
   src: local("Lato Hairline"), local("Lato-Hairline"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff) format("woff");
 }
+
 
 @font-face {
   font-family: 'Lato';
@@ -26,12 +13,13 @@
   src: local("Lato Light"), local("Lato-Light"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format("woff");
 }
 
-/* line 18, ../../app/assets/stylesheets/origin.css.scss */
+@charset "UTF-8";
+
 * {
   box-sizing: border-box;
 }
 
-/* line 23, ../../app/assets/stylesheets/origin.css.scss */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -41,57 +29,52 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-/* line 32, ../../app/assets/stylesheets/origin.css.scss */
 html {
   line-height: 1;
 }
 
-/* line 36, ../../app/assets/stylesheets/origin.css.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 40, ../../app/assets/stylesheets/origin.css.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 45, ../../app/assets/stylesheets/origin.css.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 51, ../../app/assets/stylesheets/origin.css.scss */
 q, blockquote {
   quotes: none;
 }
 
-/* line 56, ../../app/assets/stylesheets/origin.css.scss */
-q:before, q:after {
-  content: "";
-  content: none;
+q {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
 }
 
-/* line 63, ../../app/assets/stylesheets/origin.css.scss */
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+blockquote {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
 }
 
-/* line 69, ../../app/assets/stylesheets/origin.css.scss */
 a img {
   border: none;
 }
 
-/* line 73, ../../app/assets/stylesheets/origin.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 78, ../../app/assets/stylesheets/origin.css.scss */
+
 body {
   margin: 0;
   padding: 0;
@@ -99,7 +82,6 @@ body {
   font-weight: 300;
 }
 
-/* line 85, ../../app/assets/stylesheets/origin.css.scss */
 .screen-wrapper {
   position: absolute;
   top: 100%;
@@ -108,47 +90,41 @@ body {
   background-color: #fff;
 }
 
-/* line 93, ../../app/assets/stylesheets/origin.css.scss */
 #screen-01 {
   width: 100%;
   height: 100%;
 }
 
 @media (max-width: 640px) {
-  /* line 99, ../../app/assets/stylesheets/origin.css.scss */
   #screen-01 {
     position: static;
   }
 }
-/* line 104, ../../app/assets/stylesheets/origin.css.scss */
+
 #screen-02 {
   width: 100%;
   min-height: 25%;
   background-color: #ededed;
 }
 
-/* line 110, ../../app/assets/stylesheets/origin.css.scss */
 #screen-03 {
   width: 100%;
   min-height: 25%;
   background-color: #fff;
 }
 
-/* line 116, ../../app/assets/stylesheets/origin.css.scss */
 #screen-04 {
   width: 100%;
   min-height: 25%;
   background-color: #000;
 }
 
-/* line 122, ../../app/assets/stylesheets/origin.css.scss */
 #screen-05 {
   width: 100%;
   min-height: 25%;
   background-color: #fff;
 }
 
-/* line 128, ../../app/assets/stylesheets/origin.css.scss */
 .menubar {
   position: fixed;
   top: 0;
@@ -156,75 +132,70 @@ body {
   width: 100%;
   background-color: #eee;
   z-index: 9999;
-}
-/* line 135, ../../app/assets/stylesheets/origin.css.scss */
-.menubar ul {
-  float: right;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-right: 12%;
-}
-/* line 141, ../../app/assets/stylesheets/origin.css.scss */
-.menubar ul li {
-  list-style-type: none;
-  float: left;
-}
-/* line 144, ../../app/assets/stylesheets/origin.css.scss */
-.menubar ul li a {
-  display: block;
-  line-height: 120px;
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/* line 152, ../../app/assets/stylesheets/origin.css.scss */
-.menubar ul li a:hover {
-  background-color: #e8e8e8;
+  ul {
+    float: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 12%;
+    li {
+      list-style-type: none;
+      float: left;
+      a {
+        display: block;
+        line-height: 120px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          background-color: #e8e8e8;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 640px) {
-  /* line 161, ../../app/assets/stylesheets/origin.css.scss */
   .menubar {
     height: 80px;
     position: absolute;
   }
 }
+
 @media (max-width: 980px) {
-  /* line 168, ../../app/assets/stylesheets/origin.css.scss */
   .menubar ul {
     margin-right: 5%;
   }
 }
+
 @media (max-width: 725px) {
-  /* line 174, ../../app/assets/stylesheets/origin.css.scss */
   .menubar ul {
     margin-right: 3%;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 180, ../../app/assets/stylesheets/origin.css.scss */
   .menubar ul {
     display: none;
   }
 }
+
 @media (max-width: 980px) {
-  /* line 186, ../../app/assets/stylesheets/origin.css.scss */
   .menubar ul li a {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
+
 @media (max-width: 725px) {
-  /* line 193, ../../app/assets/stylesheets/origin.css.scss */
   .menubar ul li a {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 199, ../../app/assets/stylesheets/origin.css.scss */
+
 .logo {
   float: left;
   height: 80px;
@@ -240,19 +211,18 @@ body {
 }
 
 @media (max-width: 980px) {
-  /* line 214, ../../app/assets/stylesheets/origin.css.scss */
   .logo {
     margin-left: 5%;
   }
 }
+
 @media (max-width: 725px) {
-  /* line 220, ../../app/assets/stylesheets/origin.css.scss */
   .logo {
     margin-left: 3%;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 226, ../../app/assets/stylesheets/origin.css.scss */
   .logo {
     width: 110px;
     height: 60px;
@@ -261,7 +231,7 @@ body {
     float: none;
   }
 }
-/* line 235, ../../app/assets/stylesheets/origin.css.scss */
+
 .sloganbox {
   width: auto;
   margin-left: auto;
@@ -273,13 +243,12 @@ body {
 }
 
 @media (max-width: 980px) {
-  /* line 246, ../../app/assets/stylesheets/origin.css.scss */
   .sloganbox {
     margin-top: 55%;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 252, ../../app/assets/stylesheets/origin.css.scss */
   .sloganbox {
     width: 90%;
     font-size: 24px;
@@ -288,7 +257,7 @@ body {
     margin-top: 35%;
   }
 }
-/* line 261, ../../app/assets/stylesheets/origin.css.scss */
+
 .slogan {
   padding: 10px;
   line-height: 70px;
@@ -300,59 +269,54 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 272, ../../app/assets/stylesheets/origin.css.scss */
   .slogan {
     font-weight: 300;
     line-height: 60px;
   }
 }
-/* line 278, ../../app/assets/stylesheets/origin.css.scss */
+
 .padding-sc02 {
   padding-top: 160px;
 }
 
 @media (max-width: 640px) {
-  /* line 283, ../../app/assets/stylesheets/origin.css.scss */
   .padding-sc02 {
     padding-top: 50px;
   }
 }
-/* line 288, ../../app/assets/stylesheets/origin.css.scss */
+
 .headingbox img {
   margin-bottom: 5%;
 }
 
-/* line 292, ../../app/assets/stylesheets/origin.css.scss */
 .padding-sc03, .padding-sc04, .padding-sc05 {
   padding-top: 160px;
 }
 
 @media (max-width: 640px) {
-  /* line 297, ../../app/assets/stylesheets/origin.css.scss */
   .padding-sc03 {
     padding-top: 50px;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 303, ../../app/assets/stylesheets/origin.css.scss */
   .padding-sc04 {
     padding-top: 50px;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 309, ../../app/assets/stylesheets/origin.css.scss */
   .padding-sc05 {
     padding-top: 50px;
   }
 }
-/* line 314, ../../app/assets/stylesheets/origin.css.scss */
+
 .headingbox {
   width: 80%;
   margin: auto;
   text-align: center;
 }
 
-/* line 320, ../../app/assets/stylesheets/origin.css.scss */
 .linie {
   width: 120px;
   height: 10px;
@@ -364,7 +328,6 @@ body {
   z-index: 1000;
 }
 
-/* line 331, ../../app/assets/stylesheets/origin.css.scss */
 .linie-left {
   width: 10%;
   height: 1px;
@@ -374,7 +337,6 @@ body {
   z-index: 1000;
 }
 
-/* line 340, ../../app/assets/stylesheets/origin.css.scss */
 .kreuze-4 {
   width: 56px;
   height: 15px;
@@ -385,18 +347,16 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 350, ../../app/assets/stylesheets/origin.css.scss */
   .kreuze-4 {
     padding-bottom: 50px;
   }
 }
-/* line 355, ../../app/assets/stylesheets/origin.css.scss */
+
 ::selection {
   background-color: #000;
   color: #fff;
 }
 
-/* line 360, ../../app/assets/stylesheets/origin.css.scss */
 .heading {
   font-size: 26px;
   color: #222;
@@ -406,7 +366,6 @@ body {
   letter-spacing: 0.025em;
 }
 
-/* line 369, ../../app/assets/stylesheets/origin.css.scss */
 .subheading {
   text-transform: uppercase;
   color: #222;
@@ -414,12 +373,11 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 376, ../../app/assets/stylesheets/origin.css.scss */
   .subheading {
     font-size: 19px;
   }
 }
-/* line 381, ../../app/assets/stylesheets/origin.css.scss */
+
 .text {
   text-align: left;
   font-size: 13px;
@@ -429,12 +387,11 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 390, ../../app/assets/stylesheets/origin.css.scss */
   .text {
     font-size: 16px;
   }
 }
-/* line 395, ../../app/assets/stylesheets/origin.css.scss */
+
 .text-kontakt {
   text-align: left;
   font-size: 13px;
@@ -447,7 +404,6 @@ body {
   padding-left: 10px;
 }
 
-/* line 407, ../../app/assets/stylesheets/origin.css.scss */
 .textbw {
   text-align: left;
   font-size: 13px;
@@ -457,12 +413,11 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 416, ../../app/assets/stylesheets/origin.css.scss */
   .textbw {
     font-size: 16px;
   }
 }
-/* line 421, ../../app/assets/stylesheets/origin.css.scss */
+
 .headingbw {
   font-size: 26px;
   color: #fff;
@@ -472,7 +427,6 @@ body {
   letter-spacing: 0.025em;
 }
 
-/* line 430, ../../app/assets/stylesheets/origin.css.scss */
 .names {
   font-size: 20px;
   color: #fff;
@@ -483,7 +437,6 @@ body {
   text-align: left;
 }
 
-/* line 440, ../../app/assets/stylesheets/origin.css.scss */
 .headline {
   font-size: 20px;
   color: #fff;
@@ -491,7 +444,6 @@ body {
   letter-spacing: 0.025em;
 }
 
-/* line 447, ../../app/assets/stylesheets/origin.css.scss */
 .link {
   text-align: left;
   font-size: 13px;
@@ -501,75 +453,66 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* line 456, ../../app/assets/stylesheets/origin.css.scss */
   .link {
     font-size: 16px;
   }
 }
-/* line 461, ../../app/assets/stylesheets/origin.css.scss */
+
 .linkschw {
   text-align: center;
   font-size: 13px;
   margin-top: 25px;
   padding-bottom: 25px;
   line-height: 1.4em;
-}
-/* line 467, ../../app/assets/stylesheets/origin.css.scss */
-.linkschw a {
-  color: #000;
-  text-decoration: none;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 640px) {
-  /* line 474, ../../app/assets/stylesheets/origin.css.scss */
   .linkschw {
     font-size: 16px;
   }
 }
-/* line 479, ../../app/assets/stylesheets/origin.css.scss */
+
 .headline {
   background-color: #000;
 }
 
-/* line 483, ../../app/assets/stylesheets/origin.css.scss */
 a:link {
   text-decoration: none;
 }
 
-/* line 487, ../../app/assets/stylesheets/origin.css.scss */
 .colbox-4 {
   width: 80%;
   margin: auto;
   padding-top: 6%;
 }
 
-/* line 493, ../../app/assets/stylesheets/origin.css.scss */
 .col-4 {
   float: left;
   width: 21%;
   margin-right: 5.3%;
   margin-bottom: 20px;
   text-align: center;
-}
-/* line 499, ../../app/assets/stylesheets/origin.css.scss */
-.col-4:nth-child(4), .col-4:nth-child(9) {
-  margin-right: 0;
-}
-/* line 502, ../../app/assets/stylesheets/origin.css.scss */
-.col-4 img {
-  margin-bottom: 10px;
-  text-align: center;
+  &:nth-child(4), &:nth-child(9) {
+    margin-right: 0;
+  }
+  img {
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {
-  /* line 509, ../../app/assets/stylesheets/origin.css.scss */
   .col-4 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* line 516, ../../app/assets/stylesheets/origin.css.scss */
+
 .colbox-2 {
   width: 80%;
   height: auto;
@@ -577,33 +520,29 @@ a:link {
   padding-top: 7%;
 }
 
-/* line 523, ../../app/assets/stylesheets/origin.css.scss */
 .col-2 {
   float: left;
   width: 38%;
   margin-right: 24%;
   padding-bottom: 10%;
-}
-/* line 528, ../../app/assets/stylesheets/origin.css.scss */
-.col-2:last-child {
-  margin-right: 0;
-}
-/* line 531, ../../app/assets/stylesheets/origin.css.scss */
-.col-2 img {
-  width: 100%;
-  margin-top: 3%;
-  border-radius: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+  img {
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 5px;
+  }
 }
 
 @media (max-width: 640px) {
-  /* line 539, ../../app/assets/stylesheets/origin.css.scss */
   .col-2 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* line 546, ../../app/assets/stylesheets/origin.css.scss */
+
 .col-1 {
   width: 40%;
   margin: auto;
@@ -611,12 +550,11 @@ a:link {
 }
 
 @media (max-width: 640px) {
-  /* line 553, ../../app/assets/stylesheets/origin.css.scss */
   .col-1 {
     width: 80%;
   }
 }
-/* line 558, ../../app/assets/stylesheets/origin.css.scss */
+
 .col-1center {
   width: 40%;
   margin: auto;
@@ -624,7 +562,6 @@ a:link {
   text-align: center;
 }
 
-/* line 565, ../../app/assets/stylesheets/origin.css.scss */
 form.kontakt {
   text-align: center;
   font-size: 18px;
@@ -633,7 +570,6 @@ form.kontakt {
   line-height: 1.4em;
 }
 
-/* line 573, ../../app/assets/stylesheets/origin.css.scss */
 input {
   width: 99%;
   display: block;
@@ -646,18 +582,15 @@ input {
   padding: 10px;
   font-family: 'Lato';
   font-size: 13px;
-}
-/* line 585, ../../app/assets/stylesheets/origin.css.scss */
-input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
-/* line 590, ../../app/assets/stylesheets/origin.css.scss */
 textarea:focus {
   outline: none;
 }
 
-/* line 594, ../../app/assets/stylesheets/origin.css.scss */
 #anliegen {
   width: 99%;
   height: 120px;
@@ -671,7 +604,6 @@ textarea:focus {
   font-size: 13px;
 }
 
-/* line 607, ../../app/assets/stylesheets/origin.css.scss */
 #submit {
   width: 99%;
   margin: 0;
@@ -685,7 +617,6 @@ textarea:focus {
   height: 30px;
 }
 
-/* line 620, ../../app/assets/stylesheets/origin.css.scss */
 .formtext {
   display: block;
   font-size: 16px;
@@ -696,75 +627,68 @@ textarea:focus {
   margin-bottom: 0.8%;
 }
 
-/* line 630, ../../app/assets/stylesheets/origin.css.scss */
 .img_zeile {
   width: 40%;
   margin: auto;
   height: auto;
   padding-bottom: 10%;
-}
-/* line 635, ../../app/assets/stylesheets/origin.css.scss */
-.img_zeile img {
-  margin-left: 7.9%;
-  margin-right: 7.9%;
-  width: 17%;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-  opacity: 0.2;
-}
-/* line 641, ../../app/assets/stylesheets/origin.css.scss */
-.img_zeile img:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+  img {
+    margin-left: 7.9%;
+    margin-right: 7.9%;
+    width: 17%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+    opacity: 0.2;
+    &:hover {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+    }
+  }
 }
 
 @media (max-width: 980px) {
-  /* line 649, ../../app/assets/stylesheets/origin.css.scss */
   .img_zeile {
     width: 60%;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 655, ../../app/assets/stylesheets/origin.css.scss */
   .img_zeile {
     width: 80%;
   }
 }
+
 @media (max-width: 640px) {
-  /* line 661, ../../app/assets/stylesheets/origin.css.scss */
   .img_zeile img {
     margin-left: 7.4%;
     margin-right: 7.4%;
     width: 18%;
   }
 }
+
 @media (max-width: 980px) {
-  /* line 669, ../../app/assets/stylesheets/origin.css.scss */
   .img_zeile img {
     margin-left: 7.4%;
     margin-right: 7.4%;
     width: 18%;
   }
 }
-/* line 676, ../../app/assets/stylesheets/origin.css.scss */
+
 .subheading-kontakt {
   text-transform: uppercase;
   color: #222;
   font-size: 16px;
 }
 
-/* line 682, ../../app/assets/stylesheets/origin.css.scss */
 .clearing {
   clear: both;
   line-height: 0.1px;
   font-size: 0.1px;
 }
 
-/* line 688, ../../app/assets/stylesheets/origin.css.scss */
 span.kontakt-label {
   color: #9f9f9f;
 }
 
-/* line 692, ../../app/assets/stylesheets/origin.css.scss */
 .col-2k {
   float: left;
   width: 40%;
@@ -773,175 +697,147 @@ span.kontakt-label {
 }
 
 @media (max-width: 640px) {
-  /* line 700, ../../app/assets/stylesheets/origin.css.scss */
   .col-2k {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 }
+
 @media (max-width: 980px) {
-  /* line 708, ../../app/assets/stylesheets/origin.css.scss */
   .col-2k {
     width: 45%;
     margin-left: 2%;
     margin-right: 2%;
   }
 }
-/* line 715, ../../app/assets/stylesheets/origin.css.scss */
+
 .hyphenate {
   text-align: justify;
 }
 
-/* line 719, ../../app/assets/stylesheets/origin.css.scss */
 .bg-slideshow {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-}
-/* line 725, ../../app/assets/stylesheets/origin.css.scss */
-.bg-slideshow:after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-}
-/* line 732, ../../app/assets/stylesheets/origin.css.scss */
-.bg-slideshow li span {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  color: transparent;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  z-index: -1;
-  -webkit-animation: imageAnimation 36s linear 1 0s;
-  -moz-animation: imageAnimation 36s linear 1 0s;
-  -o-animation: imageAnimation 36s linear 1 0s;
-  -ms-animation: imageAnimation 36s linear 1 0s;
-  animation: imageAnimation 36s linear 1 0s;
-}
-/* line 754, ../../app/assets/stylesheets/origin.css.scss */
-.bg-slideshow .image01 {
-  background-image: url(/assets/bg-01.jpg);
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    z-index: -1;
+    -webkit-animation: imageAnimation 36s linear 1 0s;
+    -moz-animation: imageAnimation 36s linear 1 0s;
+    -o-animation: imageAnimation 36s linear 1 0s;
+    -ms-animation: imageAnimation 36s linear 1 0s;
+    animation: imageAnimation 36s linear 1 0s;
+  }
+  .image01 {
+    background-image: url(/assets/bg-01.jpg);
+  }
 }
 
-/* line 759, ../../app/assets/stylesheets/origin.css.scss */
 .no-cssanimations .bg-slideshow {
   background-image: url(/assets/bg-01.jpg);
-}
-/* line 761, ../../app/assets/stylesheets/origin.css.scss */
-.no-cssanimations .bg-slideshow li span {
-  display: none;
+  li span {
+    display: none;
+  }
 }
 
 @-webkit-keyframes imageAnimation {
-  /* line 767, ../../app/assets/stylesheets/origin.css.scss */
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
   }
-
-  /* line 771, ../../app/assets/stylesheets/origin.css.scss */
   8% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
-
-  /* line 775, ../../app/assets/stylesheets/origin.css.scss */
   100% {
     opacity: 1;
   }
 }
+
 
 @-moz-keyframes imageAnimation {
-  /* line 782, ../../app/assets/stylesheets/origin.css.scss */
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
   }
-
-  /* line 786, ../../app/assets/stylesheets/origin.css.scss */
   8% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
-
-  /* line 790, ../../app/assets/stylesheets/origin.css.scss */
   100% {
     opacity: 1;
   }
 }
+
 
 @-o-keyframes imageAnimation {
-  /* line 797, ../../app/assets/stylesheets/origin.css.scss */
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
   }
-
-  /* line 801, ../../app/assets/stylesheets/origin.css.scss */
   8% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
-
-  /* line 805, ../../app/assets/stylesheets/origin.css.scss */
   100% {
     opacity: 1;
   }
 }
+
 
 @-ms-keyframes imageAnimation {
-  /* line 812, ../../app/assets/stylesheets/origin.css.scss */
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
   }
-
-  /* line 816, ../../app/assets/stylesheets/origin.css.scss */
   8% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
-
-  /* line 820, ../../app/assets/stylesheets/origin.css.scss */
   100% {
     opacity: 1;
   }
 }
+
 
 @keyframes imageAnimation {
-  /* line 827, ../../app/assets/stylesheets/origin.css.scss */
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
   }
-
-  /* line 831, ../../app/assets/stylesheets/origin.css.scss */
   8% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
-
-  /* line 835, ../../app/assets/stylesheets/origin.css.scss */
   100% {
     opacity: 1;
   }
 }
 
-/* line 841, ../../app/assets/stylesheets/origin.css.scss */
+
 .angebot-icon {
   margin-top: 10px;
   width: 50%;
@@ -949,23 +845,21 @@ span.kontakt-label {
 }
 
 @media (max-width: 640px) {
-  /* line 848, ../../app/assets/stylesheets/origin.css.scss */
   .icons {
     display: none;
   }
 }
-/* line 853, ../../app/assets/stylesheets/origin.css.scss */
+
 .gabel-icon {
   width: 8%;
 }
 
 @media (max-width: 640px) {
-  /* line 858, ../../app/assets/stylesheets/origin.css.scss */
   .gabel-icon {
     width: 20%;
   }
 }
-/* line 863, ../../app/assets/stylesheets/origin.css.scss */
+
 .box {
   width: 400px;
   margin-left: -200px;
@@ -981,7 +875,6 @@ span.kontakt-label {
   line-height: 30px;
 }
 
-/* line 878, ../../app/assets/stylesheets/origin.css.scss */
 a[href^=tel] {
   color: inherit;
   text-decoration: underline;

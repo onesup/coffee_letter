@@ -1,6 +1,12 @@
 ---
-rails.png: rails.png
-rails/index.png: rails.png
+bg-01.jpg: bg-01.jpg
+bg-01/index.jpg: bg-01.jpg
+coffee_letter.png: coffee_letter.png
+coffee_letter/index.png: coffee_letter.png
+kreuz.png: kreuz.png
+kreuz/index.png: kreuz.png
+zigzag.svg: zigzag.svg
+zigzag/index.svg: zigzag.svg
 application.js: application.js
 application/index.js: application.js
 application.css: application.css
