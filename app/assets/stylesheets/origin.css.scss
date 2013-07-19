@@ -176,8 +176,9 @@ body {
 
 @media (max-width: 725px) {
   .menubar ul li a {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+		font-size:14px;
   }
 }
 $logo_height: 70px;
@@ -206,7 +207,7 @@ $logo_height_980: 60px;
 $logo_height_725: 55px;
 @media (max-width: 725px) {
   .logo {
-    margin-left: 3%;
+    margin-left: 2%;
 	  height: $logo_height_725;
 	  width: $logo_height_725 * 3.7875;
   }
