@@ -23,7 +23,7 @@ zigzag.svg: zigzag-e22712261590783229a16a8b76cc862a.svg
 zigzag/index.svg: zigzag-e22712261590783229a16a8b76cc862a.svg
 application.js: application-e2cf810b461cc1ff20c2e1a6341a82f6.js
 application/index.js: application-e2cf810b461cc1ff20c2e1a6341a82f6.js
-application.css: application-7fce604a257566987836856d4a1fc1ac.css
-application/index.css: application-7fce604a257566987836856d4a1fc1ac.css
+application.css: application-a878938c9034885c4f2dbc1996585cdf.css
+application/index.css: application-a878938c9034885c4f2dbc1996585cdf.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
