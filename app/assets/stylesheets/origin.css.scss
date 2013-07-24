@@ -848,12 +848,23 @@ span.kontakt-label {
   width: 50%;
   padding-bottom: 80px;
 }
-
+.icons640{
+  display: none;
+}
 @media (max-width: 640px) {
+  .angebot-icon{
+    padding-bottom: 0;
+  }
+  .icons640{
+    margin:0 auto;
+    display: block;
+    width: 50%;
+  }
   .icons {
     display: none;
   }
 }
+
 
 @media (max-width: 640px) {
   .gabel-icon {
