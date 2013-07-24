@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130713133006) do
     t.string   "sender_name"
     t.string   "sender_address"
     t.string   "sender_phone"
+    t.string   "receiver_name"
     t.string   "receiver_phone"
     t.string   "receiver_address"
     t.string   "content"

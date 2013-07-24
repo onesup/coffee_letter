@@ -2,6 +2,6 @@ CoffeeLetter::Application.routes.draw do
   get "main/index"
 
   resources :letters
-  root :to => 'letters#index'
+  root :to => 'main#index'
 
 end

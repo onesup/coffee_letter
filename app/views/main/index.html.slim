@@ -1,2 +1,174 @@
-h1 Main#index
-p Find me in app/views/main/index.html.slim
+.box style="display: none;"
+  | 커피레터.
+  br 커피레터.
+.menubar style="background-color: rgb(238, 238, 238);"
+  .logo
+  ul.menu
+    li
+      a href="/#top"
+    li
+      a href="/#screen-02"
+    li
+      a href="/#screen-03"
+    li
+      a href="/#screen-04"
+    li
+      a href="/#screen-05"
+#screen-01
+  .sloganbox
+    sspan.slogan.switch
+		  | 커피로 전하는 아날로그
+		  span.super> *
+		  | 기프티콘
+		  span.super ®
+    br.switch
+      span.slogan.switch640 커피로 전하는
+      br.switch640
+      span.slogan.switch640 
+        | 아날로그 
+        span.super> *
+        | 기프티콘
+        span.super ®
+        br.switch640
+          span.slogan Coffee Letter
+  ul#top.bg-slideshow
+    li
+      span.image01 Image 01
+.screen-wrapper
+  #screen-02
+    .headingbox.padding-sc02
+      img.gabel-icon src="/assets/gabeln.svg"
+        br
+          span.heading 서비스 소개
+          p
+            | 커피레터는
+            | 고객님이 직접 작성한 글을
+            | 디자이너가 제작한 편지에 적어
+            | 신선한 원두와 함께 배송하는 서비스입니다.
+            | 친한 친구, 사랑하는 연인, 부모님.. 에게
+            | 커피와 함께 마음을 담아 선물하세요.
+        .linie
+    .col-1
+      p.txt.hyphenate
+        | 커피레터.커피레터.커피레터.커피레터.
+    .kreuze-4
+  #screen-03
+    .headingbox.padding-sc03
+      span.heading 커피레터.커피레터.커피레터.
+      .linie
+    .colbox-4
+      .col-4
+        img src="/assets/kreuz.png"
+          br
+            span.subheading Web
+            p.txt.hyphenate 커피레터.커피레터.커피레터.
+      .col-4
+        img src="/assets/kreuz.png"
+          br
+            span.subheading Print
+            p.txt.hyphenate 커피레터.커피레터.커피레터.
+      .col-4
+        img src="/assets/kreuz.png"
+          br
+            span.subheading Logos
+            br
+              p.txt.hyphenate 커피레터.커피레터.커피레터.
+      .col-4
+        img src="/assets/kreuz.png"
+          br
+            span.subheading Branding
+            br
+              p.txt.hyphenate 커피레터.커피레터.커피레터.
+      .clearing
+      .col-4.icons
+        img.angebot-icon src="/assets/screen.svg"
+      .col-4.icons
+        img.angebot-icon src="/assets/print.svg"
+      .col-4.icons
+        img.angebot-icon src="/assets/logos.svg"
+      .col-4.icons
+        img.angebot-icon src="/assets/branding.svg"
+      .clearing
+  #screen-04
+    .headingbox.padding-sc04
+      span.headingbw 커피레터.커피레터.커피레터.커피레터.
+    .linie
+    .col-1
+      p.textbw.hyphenate
+        | 커피레터.커피레터.커피레터.커피레터.
+    .colbox-2
+      .col-2
+        a href="/"
+          span.names 커피레터.커피레터.커피레터.
+        br
+          a href="/"
+            img src="/assets/christian.jpg"
+          br
+            .linie-left
+            p.textbw ceo@moncl.net
+            a.link href="/"
+      .col-2
+        a href="/"
+          span.names 커피레터.커피레터.
+        br
+          a href="/"
+            img src="/assets/thomas.jpg"
+          br
+            .linie-left
+            p.textbw ceo@moncl.net
+            a.link href="/"
+    .clearing
+  #screen-05
+    .headingbox.padding-sc05
+      span.heading 커피레터.커피레터.
+    .linie
+    .colbox-2
+      .col-2
+        span.subheading-kontakt 커피레터.커피레터.커피레터.
+        br
+          p.txt.hyphenate
+            | 커피레터.커피레터.커피레터.
+            br
+              br
+          span.subheading-kontakt 커피레터.커피레터.커피레터.
+          br
+            p.text-kontakt
+              span.kontakt-label Adresse:
+              | 난향동
+              br
+                span.kontakt-label Telefon:
+                | 0151 - 40510066
+                br
+                  span.kontakt-label E-Mail:
+                  | ceo@moncl.net
+            span.subheading-kontakt 커피레터.커피레터.커피레터.
+            br
+              p.text-kontakt
+                span.kontakt-label Adresse:
+                | 자양동
+                br
+                  span.kontakt-label Telefon:
+                  | 0172 - 5429565
+                  br
+                    span.kontakt-label E-Mail:
+                    | wasabi@moncl.net
+      .col-2
+        = simple_form_for @letter do |f|
+          = f.input :sender_name, label: "보내는 분 이름"
+          = f.input :receiver_name, label: "받는 분 이름"
+          = f.input :content, as: :text, label: "보내고픈 이야기", input_html: {id: 'anliegen'}, label_html: {class: 'content'}
+          = f.button :submit, "보내기", id: 'submit'
+    .clearing
+    .img_zeile
+      a#twitter-icon href="" target="_blank"
+        img src="/assets/twitter.svg" title="twitter"
+      a#email-icon href="mailto:ceo@moncl.net" target="_blank"
+        img src="/assets/gabelkreis.svg"
+      a#fb-icon href="http://www.facebook.com/coffeeletter" target="_blank"
+        img src="/assets/facebook.svg"
+    .col-1.linkschw
+      a href="/impressum/index.html" 
+        |(주)몽클 2013
+      br/
+      a href="/impressum/index.html" 
+        |*기프티콘®은 에스케이텔레콤(주)의 등록상표입니다.
