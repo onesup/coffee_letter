@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>CoffeeLetter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
 	<!--[if lte IE 9]>
@@ -10,6 +11,14 @@
 	<![endif]-->
 	
   <%= csrf_meta_tags %>
+  <meta property="og:title" content="아날로그 기프트콘" />
+  <meta property="og:site_name" content="커피레터" />
+  <meta property="og:description" content="커피레터는 사랑입니다." />
+  <meta property="og:type" content="site" />
+  <meta property="og:url" content="http://letter.moncl.net" />
+  <meta property="og:image" content="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/946628_392945710817192_738100542_n.jpg" />
+  <!-- <meta property="fb:admins" content="[여기에 관리자 ID를 등록합니다]" />
+  <meta property="fb:app_id" content="[여기에 APP_ID를 등록합니다]" /> -->
 </head>
 <body>
 
@@ -27,9 +36,14 @@
 	</div>
 	<div id="screen-01">
 				<div class="sloganbox">
-			<span class="slogan">커피로 전하는 아날로그 기프티콘</span><br>
-      <span class="slogan">Coffee Letter</span>
-		</div>
+    			<span class="slogan switch">
+            커피로 전하는 아날로그 
+            <span class="super">*</span>기프티콘<span class="super">®</span></span>
+            <br class="switch">
+          <span class="slogan switch640">커피로 전하는</span><br class="switch640">
+          <span class="slogan switch640">아날로그 기프티콘</span><br class="switch640">
+          <span class="slogan">Coffee Letter</span>
+    		</div>
 				<ul class="bg-slideshow" id="top">
     		<li>
     			<span class="image01">Image 01</span>
@@ -198,7 +212,8 @@
 						</a>
 					</div>
 				<div class="col-1 linkschw">
-					<a href="/impressum/index.html">커피레터.</a>
+					<a href="/impressum/index.html">커피레터.</a><br />
+          <a href="/impressum/index.html">*기프티콘®은 에스케이텔레콤의 등록상표입니다.</a>
 				</div>
 			</div>
 	</div>
