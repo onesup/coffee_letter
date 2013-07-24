@@ -638,9 +638,8 @@ textarea:focus {
   margin: auto;
   height: auto;
   padding-bottom: 10%;
+  text-align: center;
   img {
-    margin-left: 7.9%;
-    margin-right: 7.9%;
     width: 17%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
     opacity: 0.2;
@@ -857,7 +856,7 @@ span.kontakt-label {
 }
 
 .gabel-icon {
-  width: 8%;
+  width: 25%;
 }
 
 @media (max-width: 640px) {
