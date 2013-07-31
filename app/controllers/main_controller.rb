@@ -1,5 +1,5 @@
 class MainController < ApplicationController
-  layout false
+  layout "main"
   
   def index
     @letter = Letter.new
