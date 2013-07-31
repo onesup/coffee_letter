@@ -1,0 +1,26 @@
+= simple_form_for(@letter) do |f|
+  - if @letter.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@letter.errors.count, "error")
+        | prohibited this letter from being saved:
+      ul
+        - @letter.errors.full_messages.each do |msg|
+          li= msg
+  div.panel
+    div.form-group
+      = f.input :email, label: "이메일", input_html: {class: "form-control"}
+    div.form-group  
+      = f.input :sender_name, label: "보내는 분 이름", input_html: {class: "form-control"}
+    div.form-group  
+      = f.input :sender_address, label: "보내는 분 주소", input_html: {class: "form-control"}
+    div.form-group
+      = f.input :sender_phone, label: "보내는 분 전화번호", input_html: {class: "form-control"}
+    div.form-group
+      = f.input :receiver_phone, label: "받는 분 전화번호", input_html: {class: "form-control"}
+    div.form-group
+      = f.input :receiver_address, label: "받는 분 주소", input_html: {class: "form-control"}
+    div.form-group
+      = f.input :content, label: "전할 이야기", as: :text, input_html: {class: "form-control"}
+    div.form-group
+      = f.submit '확인하기!', class: "form-control btn btn-default"

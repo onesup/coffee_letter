@@ -1,0 +1,36 @@
+.container
+  p#notice= notice
+  ul.list-group
+    li.list-group-item
+      dl
+        dt 이메일
+        dd = @letter.email
+    li.list-group-item
+      dl
+        dt 보내는 분 이름
+        dd = @letter.sender_name
+    li.list-group-item
+      dl
+        dt 보내는 분 주소
+        dd = @letter.sender_address
+    li.list-group-item
+      dl
+        dt 보내는 분 전화번호
+        dd = @letter.sender_phone
+    li.list-group-item
+      dl
+        dt 받는 분 전화번호
+        dd = @letter.receiver_phone
+    li.list-group-item
+      dl
+        dt 받는 분 주소
+        dd = @letter.receiver_address
+    li.list-group-item
+      dl
+        dt 받는 분 전화번호
+        dd = @letter.receiver_phone
+    li.list-group-item
+      dl
+        dt 전할 이야기
+        dd = @letter.content
+  = link_to '수정', edit_letter_path(@letter)

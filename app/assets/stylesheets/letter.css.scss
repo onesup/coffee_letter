@@ -1,7 +1,28 @@
 body{
   padding-top: 60px;
+    padding-bottom: 20px;
   font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif !important 
+
+}
+.container{
+  margin-top: 20px;
 }
 .jumbotron{
   margin-top: 20px;
+}
+textarea.text{
+  width: 99%;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #eee;
+  resize: none;
+  padding: 10px;
+  font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif;
+  font-size: 13px;
+ 
+}
+div.actions input{
+  margin-top :10px;
 }
