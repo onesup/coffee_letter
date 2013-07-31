@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20130713133006) do
     t.string   "receiver_address"
     t.string   "content"
     t.string   "express"
+    t.boolean  "is_public"
+    t.integer  "like_count"
     t.integer  "paper_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false

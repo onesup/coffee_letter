@@ -44,8 +44,12 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.save
-        format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
-        format.json { render json: @letter, status: :created, location: @letter }
+        if @letter.controller_name == 'main'
+          format.html { redirect_to edit_letter_path(@letter) }
+        else
+          format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
+          format.json { render json: @letter, status: :created, location: @letter }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @letter.errors, status: :unprocessable_entity }

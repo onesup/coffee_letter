@@ -14,6 +14,8 @@ class CreateLetters < ActiveRecord::Migration
       t.string :receiver_phone
       t.string :content
       t.string :express
+      t.boolean :is_public
+      t.integer :like_count
       t.integer :paper_id
 
       t.timestamps
