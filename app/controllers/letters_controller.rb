@@ -40,10 +40,10 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    @letter = Letter.new(params[:letter])
-
+    @letter = Letter.new(params[:letter])    
     respond_to do |format|
       if @letter.save
+        @letter.billings.create()
         if @letter.controller_name == 'main'
           format.html { redirect_to edit_letter_path(@letter) }
         else

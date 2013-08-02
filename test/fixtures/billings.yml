@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  letter_id: 1
+  amount: 1
+  approved_at: 2013-08-02 20:30:14
+  status: MyString
+  status_desc: MyString
+  sender_name: MyString
+
+two:
+  user_id: 1
+  letter_id: 1
+  amount: 1
+  approved_at: 2013-08-02 20:30:14
+  status: MyString
+  status_desc: MyString
+  sender_name: MyString

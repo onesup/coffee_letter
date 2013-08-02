@@ -8,13 +8,11 @@
         - @letter.errors.full_messages.each do |msg|
           li= msg
   div.panel
-    div.form-group
-      = f.input :email, label: "이메일", input_html: {class: "form-control"}
     div.form-group  
       = f.input :sender_name, label: "보내는 분 이름", input_html: {class: "form-control"}
-    div.form-group
-      = f.input :sender_phone, label: "보내는 분 전화번호", input_html: {class: "form-control"}
     div.form-group  
+      = f.input :receiver_name, label: "받는 분 이름", input_html: {class: "form-control"}
+    div.form-group
       = f.input :sender_address, label: "보내는 분 주소", input_html: {class: "form-control"}
     div.form-group
       = f.input :receiver_address, label: "받는 분 주소", input_html: {class: "form-control"}

@@ -1,0 +1,14 @@
+.panel
+  = simple_form_for @letter do |f|
+    = f.simple_fields_for :billings do |billing_form|
+      .form-group
+        = billing_form.input :sender_name, label: "입금자 성명", input_html: {class: "form-control", value: @letter.sender_name}
+    .form-group
+      = f.input :sender_phone, label: "입금 확인 문자 받을 전화번호", input_html: {class: "form-control"}
+    .form-group
+      = f.input :email, label: "배송 정보 확인 로그인용 이메일", input_html: {class: "form-control"}
+    .form-group
+      = f.input :email, label: "배송 정보 확인 로그인용 비밀번호", input_html: {class: "form-control"}
+    .form-group
+      = f.submit '신청 완료', class: "form-control btn btn-default"
+

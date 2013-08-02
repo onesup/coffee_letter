@@ -1,0 +1,31 @@
+h1 Listing billings
+
+table
+  tr
+    th User
+    th Letter
+    th Amount
+    th Approved at
+    th Status
+    th Status desc
+    th Sender name
+    th
+    th
+    th
+
+  - @billings.each do |billing|
+    tr
+      td = billing.user_id
+      td = billing.letter_id
+      td = billing.amount
+      td = billing.approved_at
+      td = billing.status
+      td = billing.status_desc
+      td = billing.sender_name
+      td = link_to 'Show', billing
+      td = link_to 'Edit', edit_billing_path(billing)
+      td = link_to 'Destroy', billing, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Billing', new_billing_path

@@ -25,16 +25,10 @@
       dl
         dt 보내는 분 주소
         dd = @letter.sender_address
-    li.list-group-item
-      dl
-        dt 보내는 분 전화번호
-        dd = @letter.sender_phone
-    li.list-group-item
-      dl
-        dt 이메일
-        dd = @letter.email
   ul.nav class="nav-pills"
     li.active
-      = link_to '우표 붙이기!', edit_letter_path(@letter)
+      = link_to '우표 붙이기!', edit_billing_path(@letter.billings.first)
     li
       = link_to '다시 고치기!', edit_letter_path(@letter)
+    li
+      = link_to '일단 저장하고 다음에 보내기^^7', edit_letter_path(@letter)

@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong User:
+  = @billing.user_id
+p
+  strong Letter:
+  = @billing.letter_id
+p
+  strong Amount:
+  = @billing.amount
+p
+  strong Approved at:
+  = @billing.approved_at
+p
+  strong Status:
+  = @billing.status
+p
+  strong Status desc:
+  = @billing.status_desc
+p
+  strong Sender name:
+  = @billing.sender_name
+
+= link_to 'Edit', edit_billing_path(@billing)
+'|
+= link_to 'Back', billings_path
