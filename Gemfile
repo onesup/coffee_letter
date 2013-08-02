@@ -15,10 +15,14 @@ gem 'slim-rails'
 gem 'haml2slim'
 gem 'slim'
 gem 'simple_form'
-
+gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
+group :production do
+  gem 'rb-readline', '~> 0.4.2'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

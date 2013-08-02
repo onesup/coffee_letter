@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130802113014) do
+ActiveRecord::Schema.define(:version => 20130802202042) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.string   "provider",   :null => false
+    t.string   "uid",        :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "billings", :force => true do |t|
     t.integer  "user_id"
@@ -41,6 +49,17 @@ ActiveRecord::Schema.define(:version => 20130802113014) do
     t.boolean  "is_public"
     t.integer  "like_count"
     t.integer  "paper_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email",            :null => false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.string   "phone"
+    t.string   "name"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
