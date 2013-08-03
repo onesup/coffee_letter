@@ -1,0 +1,29 @@
+.container
+  h1 Listing letters
+
+  table
+    tr
+      th 발송자
+      th 발송자 연락처
+      th 수신자
+      th 수신자 주소
+      th 편지내용
+      th 생성일 
+      th
+      th
+
+    - @letters.each do |letter|
+      tr
+        td = letter.sender_name
+        td = letter.sender_phone
+        td = letter.receiver_name
+        td = letter.receiver_address
+        td = letter.content
+
+        td = letter.created_at
+        td = link_to 'Show', admin_letter_path(letter)
+        td = link_to 'Edit', edit_admin_letter_path(letter)
+
+  br
+
+  = link_to 'New letter', new_admin_letter_path
