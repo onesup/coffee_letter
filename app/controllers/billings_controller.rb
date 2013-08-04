@@ -1,4 +1,6 @@
 class BillingsController < ApplicationController
+  before_filter :store_location
+  before_filter :require_login, only: [:show, :new, :edit]
   # GET /billings
   # GET /billings.json
   def index
@@ -13,8 +15,8 @@ class BillingsController < ApplicationController
   # GET /billings/1
   # GET /billings/1.json
   def show
+    
     @billing = Billing.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @billing }
@@ -36,6 +38,7 @@ class BillingsController < ApplicationController
   # GET /billings/1/edit
   def edit
     @letter = Letter.find(params[:id])
+    redirect_to edit_user_billing_path(current_user.id, @letter.id)
   end
 
   # POST /billings

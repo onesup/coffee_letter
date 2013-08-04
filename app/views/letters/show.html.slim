@@ -1,7 +1,6 @@
 .container
-  p#notice= notice
   .jumbotron
-    h1 편지 보내기 마지막 단계!
+    h1 편지 쓰기 마지막 단계!
     p 
       |  받는 분 성함과 주소를 다시 한 번 확인 부탁드려요. 전할 이야기도 한 번 다시 확인해보시구요. 혹시 주소가 틀리다면 저희가 전화로 다시 여쭤볼께요. 보내시는 분 성함과 전화번호도 확인 부탁드려요^^
   ul.list-group
@@ -27,8 +26,8 @@
         dd = @letter.sender_address
   ul.nav class="nav-pills"
     li.active
-      = link_to '우표 붙이기!', edit_billing_path(@letter.billings.first)
+      = link_to '우표 붙이기!', edit_billing_path(@letter.billing)
     li
       = link_to '다시 고치기!', edit_letter_path(@letter)
-    li
-      = link_to '일단 저장하고 다음에 보내기^^7', edit_letter_path(@letter)
+    / li
+    /   = link_to '일단 저장하고 다음에 보내기^^7', edit_letter_path(@letter)

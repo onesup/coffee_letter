@@ -17,6 +17,7 @@ class CreateLetters < ActiveRecord::Migration
       t.boolean :is_public
       t.integer :like_count
       t.integer :paper_id
+      t.integer :billing_id
 
       t.timestamps
     end

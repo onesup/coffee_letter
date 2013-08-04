@@ -1,0 +1,13 @@
+.container
+  .signin
+    h1 계정 만들기
+    = simple_form_for @user do |f|
+      .panel
+        .form-group
+          = f.input :email, label: "이메일", placeholder: "email", input_html: {class: "form-control"}
+        .form-group
+          = f.input :password, label: "비번", placeholder: "password", input_html: {class: "form-control"}
+        .form-group
+          = f.input :password_confirmation, label: "비번확인", placeholder: "password confirmation", input_html: {class: "form-control"}
+        .form-group
+          = f.submit '완료', class: "form-control btn btn-default btn-primary"

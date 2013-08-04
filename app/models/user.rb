@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :name, :phone
   
   validates_confirmation_of :password
-  
+  has_many :letters
 end

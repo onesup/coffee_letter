@@ -45,14 +45,19 @@
           -->
         </ul>
         <ul class="nav navbar-nav pull-right">
+          <% if logged_in? %>
+            <li><%= link_to "#{current_user.email} 로그아웃", logout_path%></li>
+          <% end %>
           <!--
-          <li><a href="/examples/navbar/">Default</a></li>
           <li><a href="/examples/navbar-static-top/">Static top</a></li>
           <li class="active"><a href="/examples/navbar-fixed-top/">Fixed top</a></li>
           -->
         </ul>
       </div><!--/.nav-collapse -->
     </div>
+  </div>
+  <div class="container">
+  <p id="notice"><%= notice %></p>
   </div>
 <%= yield %>
 

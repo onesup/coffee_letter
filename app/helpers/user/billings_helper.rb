@@ -1,0 +1,2 @@
+module User::BillingsHelper
+end

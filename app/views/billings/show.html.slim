@@ -1,27 +1,31 @@
-p#notice = notice
-
-p
-  strong User:
-  = @billing.user_id
-p
-  strong Letter:
-  = @billing.letter_id
-p
-  strong Amount:
-  = @billing.amount
-p
-  strong Approved at:
-  = @billing.approved_at
-p
-  strong Status:
-  = @billing.status
-p
-  strong Status desc:
-  = @billing.status_desc
-p
-  strong Sender name:
-  = @billing.sender_name
-
-= link_to 'Edit', edit_billing_path(@billing)
-'|
-= link_to 'Back', billings_path
+.container
+  .jumbotron
+    h1 이제 곧 커피레터가 친구에게 발송됩니다.
+    p 
+      |  커피레터 발송비 3,000원을 기업은행 261-063451-04-011 (주)몽클로 입금해주세요.
+  ul.list-group
+    li.list-group-item
+      dl
+        dt 받는 분 이름
+        dd 
+    li.list-group-item
+      dl
+        dt 받는 분 주소
+        dd 
+    li.list-group-item
+      dl
+        dt 전할 이야기
+        dd 
+    li.list-group-item
+      dl
+        dt 보내는 분 이름
+        dd 
+    li.list-group-item
+      dl
+        dt 보내는 분 주소
+        dd 
+  ul.nav class="nav-pills"
+    li.active
+      = link_to '우표 붙이기!'
+    li
+      = link_to '다시 고치기!' 

@@ -1,14 +1,39 @@
 .container
-  .side-logo
+  .jumbotron
+    h1 커피레터 계정이 있나요?
+    p &nbsp
+    p
+      | 커피레터 계정을 가지고 있다면 로그인 부탁드려요.
+    p  
+      | 계정이 없다면 편지 내용과 결제 정보를 보호하기 위해서 계정을 만들어주세요. 
+    p  
+      | 이메일과 비번만 알려주시면 됩니다 ^^
   .login
     h1 로그인
     = form_tag sessions_path do
       .panel
         .form-group
-          = label_tag :username, "ID"
-          = text_field_tag :username, params[:username], :placeholder => "ID", class: "form-control"
+          = label_tag :email, "이메일"
+          = text_field_tag :email, params[:email], :placeholder => "email", class: "form-control"
         .form-group
-          = label_tag :password, "패스워드"
-          = password_field_tag :password,nil, :placeholder => "패스워드" , class: "form-control"
+          = label_tag :password, "비번"
+          = password_field_tag :password, nil, :placeholder => "password" , class: "form-control"
         .form-group
-          = submit_tag "로그인", :class => "btn btn-primary form-control"
+          = submit_tag "로그인", :class => "btn btn-default form-control"
+
+  / ul.nav class="nav-pills"
+  /   li.active
+  /     = link_to '아직 계정이 없어요! 다음단계 ㄱㄱㅅ', root_path
+  .signin
+    h1 계정 만들기
+    - @user = User.new
+    = simple_form_for @user do |f|
+      .panel
+        .form-group
+          = f.input :email, label: "배송 정보 확인용 이메일", placeholder: "email", input_html: {class: "form-control"}
+        .form-group
+          = f.input :password, label: "비번", placeholder: "password", input_html: {class: "form-control"}
+        .form-group
+          = f.input :password_confirmation, label: "비번확인", placeholder: "password confirmation", input_html: {class: "form-control"}
+        .form-group
+          = f.submit '계정 등록', class: "form-control btn btn-default btn-primary"

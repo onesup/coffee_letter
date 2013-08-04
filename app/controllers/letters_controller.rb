@@ -3,7 +3,6 @@ class LettersController < ApplicationController
   # GET /letters.json
   def index
     @letters = Letter.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @letters }
@@ -14,7 +13,6 @@ class LettersController < ApplicationController
   # GET /letters/1.json
   def show
     @letter = Letter.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @letter }
@@ -43,7 +41,9 @@ class LettersController < ApplicationController
     @letter = Letter.new(params[:letter])    
     respond_to do |format|
       if @letter.save
-        @letter.billings.create()
+        billing = Billing.create()
+        billing.letters << @letter
+        billing.save
         if @letter.controller_name == 'main'
           format.html { redirect_to edit_letter_path(@letter) }
         else
