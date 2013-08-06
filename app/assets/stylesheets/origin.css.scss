@@ -209,6 +209,10 @@ $logo_height: 70px;
   background-size: 100% 100%;
   margin-top: 22px;
   margin-left: 3%;
+
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 $logo_height_980: 60px;
 @media (max-width: 980px) {

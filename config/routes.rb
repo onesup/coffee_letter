@@ -1,17 +1,5 @@
 CoffeeLetter::Application.routes.draw do
 
-  get "billings/index"
-
-  get "billings/new"
-
-  get "billings/edit"
-
-  get "letters/index"
-
-  get "letters/new"
-
-  get "letters/edit"
-
   get "signup" => "users#new", :as => "signup"
 
   get "logout"  => "sessions#destroy", :as => "logout"
@@ -30,6 +18,7 @@ CoffeeLetter::Application.routes.draw do
     scope module: :user do 
       resources :letters, except: [:destroy]
       resources :billings, except: [:destroy, :new]
+      resources :main, only: [:index]
     end
   end
 

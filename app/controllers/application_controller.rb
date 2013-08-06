@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def after_logout_path
     session[:previous_url] || login_path
   end
-
+  
   private
   def not_authenticated
     redirect_to login_url, :notice => "로그인이 필요합니다."

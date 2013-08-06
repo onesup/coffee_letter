@@ -1,5 +1,5 @@
 .menubar style="background-color: rgb(238, 238, 238);"
-  .logo
+  =link_to "Coffee letter", new_letter_path, class: "logo" 
   ul.menu
     li
       a href="/#top"
@@ -110,7 +110,7 @@
     .linie
     .col-1
       p.textbw.hyphenate
-        | 마음을 전하는 분과, 받을 분. 두 분 만의 각별한 우정을 위해 이 두 명이 정성스레 준비했습니다. 백다진 로스터는 xxxx년 바리스타로서 첫 발을 내딛은 경력 x년의 베테랑 바리스타이자 로스터입니다. 백다진 로스터가 혼을 담아 로스팅한 커피빈이라면 편지를 받아 보는 분에게 당신은 갓 볶은 품격 넘치는 콜롬비아 향으로 기억 될 것입니다. 정다울 디자이너는 현재 미대 동양화과에 재학중인 재기넘치는 신예 디자이너입니다. 정다울 디자이너의 여름 냄새 물씬 풍기는 일러스트레이션이 함께하는 당신의 편지는 편지를 받아보는 분 께서도 오래도록 간직할 것입니다.
+        | 마음을 전하는 분과, 받을 분. 두 분 만의 각별한 우정을 위해 이 두 명이 정성스레 준비했습니다. 백다진 로스터는 2008년 바리스타로서 첫 발을 내딛은 경력 5년의 베테랑 바리스타이자 로스터입니다. 백다진 로스터가 혼을 담아 로스팅한 커피빈이라면 편지를 받아 보는 분에게 당신은 갓 볶은 품격 넘치는 콜롬비아 향으로 기억 될 것입니다. 정다울 디자이너는 현재 미대 동양화과에 재학중인 재기넘치는 신예 디자이너입니다. 정다울 디자이너의 여름 냄새 물씬 풍기는 일러스트레이션이 함께하는 당신의 편지는 편지를 받아보는 분 께서도 오래도록 간직할 것입니다.
     .colbox-2
       .col-2
         a href="/"
@@ -154,13 +154,13 @@
             br
               p.text-kontakt
                 span.kontakt-label 주소:
-                | 서울시 광진구 중곡동 166-44 3층
+                | 서울시 광진구 자양2동 600-13
                 br
                 span.kontakt-label 전화번호:
-                | 010-7154-0255
+                | 010-6418-4332
                 br
                 span.kontakt-label E-Mail:
-                | ceo@moncl.net
+                | onesup.lee@gmail.com
       .col-2
         = simple_form_for @letter do |f|
           = f.input :sender_name, label: "보내는 분 이름"
@@ -173,8 +173,8 @@
       a#fb-icon href="https://www.facebook.com/pages/%EC%BB%A4%ED%94%BC%EB%A0%88%ED%84%B0/388748177907775" target="_blank"
         img src="/assets/facebook.svg"
     .col-1.linkschw
-      a href="/impressum/index.html" 
-        |(주)몽클 2013
-      br/
+      / a href="/impressum/index.html" 
+      /   |(주)몽클
+      / br/
       a href="/impressum/index.html" 
         |*기프티콘®은 에스케이텔레콤(주)의 등록상표입니다.
