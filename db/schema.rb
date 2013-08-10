@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.integer  "user_id",    null: false
     t.string   "provider",   null: false
     t.string   "uid",        null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "billings", force: true do |t|
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.string   "status"
     t.string   "status_desc"
     t.string   "sender_name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "letters", force: true do |t|
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.integer  "like_count"
     t.integer  "paper_id"
     t.integer  "billing_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", force: true do |t|
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.string   "salt"
     t.string   "phone"
     t.string   "name"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "role_id"
   end
 
