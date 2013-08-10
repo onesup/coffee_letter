@@ -1,3 +1,4 @@
+#encoding: utf-8
 class User::BillingsController < ApplicationController
   before_filter :require_login
   def index
@@ -25,8 +26,8 @@ class User::BillingsController < ApplicationController
   def update
     @billing = Billing.find(params[:id])
     respond_to do |format|
-      if @billing.update_attributes(params[:billing])
-        format.html { redirect_to user_billing_path(current_user, @billing), notice: 'Billing was successfully updated.' }
+      if @billing.update_attributes(billing_params)
+        format.html { redirect_to user_billing_path(current_user, @billing), notice: '입금정보가 작성되었습니다.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -34,4 +35,11 @@ class User::BillingsController < ApplicationController
       end
     end
   end
+  
+  private
+  
+    def billing_params
+      params.require(:billing).permit(:sender_name)
+    end
+  
 end

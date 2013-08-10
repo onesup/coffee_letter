@@ -1,3 +1,4 @@
+#encoding: utf-8
 class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
@@ -38,7 +39,8 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    @letter = Letter.new(params[:letter])    
+    
+    @letter = Letter.new(letter_params)    
     respond_to do |format|
       if @letter.save
         billing = Billing.create()
@@ -47,7 +49,7 @@ class LettersController < ApplicationController
         if @letter.controller_name == 'main'
           format.html { redirect_to edit_letter_path(@letter) }
         else
-          format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
+          format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
           format.json { render json: @letter, status: :created, location: @letter }
         end
       else
@@ -60,7 +62,7 @@ class LettersController < ApplicationController
   # PUT /letters/1
   # PUT /letters/1.json
   def update
-    @letter = Letter.find(params[:id])
+    @letter = Letter.find(letter_params)
 
     respond_to do |format|
       if @letter.update_attributes(params[:letter])
@@ -84,4 +86,15 @@ class LettersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private  
+  
+    def letter_params
+      params.require(:letter).permit(:content, :receiver_name, :receiver_address, :receiver_phone, :sender_address, :sender_name, :sender_phone, :controller_name)
+      # attr_accessible :content, :crypted_password, :email, :express, :paper_id, :salt, :user_id
+      # attr_accessible :receiver_name, :receiver_address, :receiver_phone, :receiver_phone
+      # attr_accessible :sender_address, :sender_name, :sender_phone, :controller_name
+      
+    end
+  
 end

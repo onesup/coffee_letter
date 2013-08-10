@@ -17,18 +17,19 @@ gem 'slim'
 gem 'simple_form'
 gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
 gem "pry"
-gem 'protected_attributes'
+# gem 'protected_attributes'
+gem 'the_role', '~> 2.0.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :production do
   gem 'rb-readline', '~> 0.4.2'
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 4.0.0'
-  gem 'coffee-rails', '~> 4.0.0'
-  gem 'uglifier', '>= 1.3.0'
-end
+
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+
 
 gem 'jquery-rails'
 
