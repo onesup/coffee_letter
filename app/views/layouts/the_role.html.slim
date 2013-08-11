@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title TheRoleTestcase
+    = csrf_meta_tags
+    = stylesheet_link_tag  "the_role/bootstrap_sass", :media => "all"
+    = stylesheet_link_tag  "the_role", :media => "all"
+
+  body
+    .container-fluid
+      .row-fluid
+        .span12.header
+          h2 관리자 계정 관리
+
+      .row-fluid
+        .span3.manage_panel
+          = yield :role_sidebar
+
+          h4 Basic links
+
+          ul
+            / li= link_to 'Home',         root_path
+            / li= link_to 'pages/index',  pages_path
+            / li= link_to 'pages/manage', manage_pages_path
+            / li= link_to 'pages/my',     my_pages_path
+            / li= link_to 'admin/roles',  admin_roles_path
+          
+          / = render :partial => 'layouts/current_user_info'
+
+        .span9.main_content
+          - if flash[:notice]
+            .alert.alert-success
+              a.close href='#', 'data-dismiss' => :alert   &times;
+              = flash[:notice]
+
+          - if flash[:error]
+            .alert.alert-error
+              a.close href='#', 'data-dismiss' => :alert   &times;
+              = flash[:error]
+          
+          = yield
+          = yield :role_main
+
+      .row-fluid
+        .span3
+          p
+            / = link_to 'TheRole 2', 'https://github.com/the-teacher/the_role'
+        .span9
+          p
+            / = link_to 'en', '/?locale=en'
+            / | \|
+            / = link_to 'ru', '/?locale=ru'
+            / | \|
+            / = link_to 'es', '/?locale=es'
+            / | \|
+            / = link_to 'zh_CN', '/?locale=zh_CN'
+            / | \|
+            / b
+            /   = t '.current_locale'
+            /   = I18n.locale

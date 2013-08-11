@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path
-    session[:previous_url] || user_main_index_path(current_user)
+    # session[:previous_url] || user_main_index_path(current_user)
+    session[:previous_url] || new_user_letter_path(current_user)
   end
 
   def after_logout_path

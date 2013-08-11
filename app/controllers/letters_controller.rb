@@ -62,11 +62,11 @@ class LettersController < ApplicationController
   # PUT /letters/1
   # PUT /letters/1.json
   def update
-    @letter = Letter.find(letter_params)
+    @letter = Letter.find(params[:id])
 
     respond_to do |format|
-      if @letter.update_attributes(params[:letter])
-        format.html { redirect_to @letter, notice: 'Letter was successfully updated.' }
+      if @letter.update_attributes(letter_params)
+        format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
