@@ -8,7 +8,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'mysql2'
 gem 'unicorn'
-gem 'capistrano'
+gem 'capistrano', :git => "git://github.com/capistrano/capistrano.git"
 gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
 
 gem 'slim-rails'
@@ -16,10 +16,12 @@ gem 'haml2slim'
 gem 'slim'
 gem 'simple_form'
 gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
-gem "pry"
+
 # gem 'protected_attributes'
 gem 'the_role', '~> 2.0.0'
-# Gems used only for assets and not required
+group :development do
+  gem "pry"
+end
 # in production environments by default.
 group :production do
   gem 'rb-readline', '~> 0.4.2'
