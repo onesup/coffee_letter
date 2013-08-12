@@ -19,7 +19,7 @@
 worker_processes 3
 timeout 30
 preload_app true
-
+listen "/tmp/unicorn.coffee_letter.sock"
 before_fork do |server, worker|
 
   Signal.trap 'TERM' do
