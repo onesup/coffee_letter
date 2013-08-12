@@ -15,6 +15,9 @@
 # 
 # 
 
+root = "/home/daul/coffee_letter/current"
+working_directory root
+pid "#{root}/tmp/pids/unicorn.pid"
 
 worker_processes 3
 timeout 30
