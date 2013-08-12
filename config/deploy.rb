@@ -1,24 +1,21 @@
 require "bundler/capistrano"
-#require "delayed/recipes"
-
-server "14.63.162.188", :web, :app, :db, primary: true
 
 set :rails_env, "production" #added for delayed job
 set :application, "coffee_letter"
 set :user, "daul"
 set :deploy_to, "/home/#{user}/#{application}"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :use_sudo, false
-
 set :scm, "git"
 set :repository, "git@github.com:onesup/#{application}.git"
 set :branch, "master"
 set :default_environment, {
       'PATH' => "/home/daul/.rbenv/versions/2.0.0-p0/bin/:$PATH"
     }
+set :keep_releases, 5
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-
+server "14.63.162.188", :web, :app, :db, primary: true
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 # for delayed_job
