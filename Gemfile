@@ -25,7 +25,6 @@ end
 # in production environments by default.
 group :production do
   gem 'rb-readline', '~> 0.4.2'
-  gem 'rails_12factor'
 end
 
 
