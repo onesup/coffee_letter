@@ -8,7 +8,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'mysql2'
 gem 'unicorn'
-gem 'capistrano', :git => "git://github.com/capistrano/capistrano.git"
+
 gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
 
 gem 'slim-rails'
@@ -21,6 +21,7 @@ gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
 gem 'the_role', '~> 2.0.0'
 group :development do
   gem "pry"
+  gem 'capistrano', :git => "git://github.com/capistrano/capistrano.git"
 end
 # in production environments by default.
 group :production do
