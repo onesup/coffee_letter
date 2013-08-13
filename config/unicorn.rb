@@ -1,14 +1,20 @@
-root = "/home/daul/coffee_letter/current"
+require "tmpdir"
+TMP_DIR = Dir.tmpdir
+APP_NAME = "coffee_letter"
+APP_PATH = File.expand_path("/home/daul/#{APP_NAME}/current")
+
+root = "#{APP_PATH}"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.err.log"
 stdout_path "#{root}/log/unicorn.out.log"
  
 # change the YOUR_APP_NAME to your application name
-listen "/tmp/unicorn.coffee_letter.sock"
+listen "#{TMP_DIR}/.unicorn.#{APP_NAME}.sock", :backlog => 512
+# listen "/tmp/unicorn.coffee_letter.sock"
 worker_processes 2
-timeout 30
-preload_app true# 
+timeout 180
+preload_app false
 before_exec do |server|
   ENV["BUNDLE_GEMFILE"] = "#{root}/Gemfile"
 end
