@@ -148,19 +148,30 @@
             | 간단합니다. 우선 보내는 분의 이름과 받은 분의 이름, 
             | 친구에게 하고 싶은 이야기를 적고
             | 보내기! 를 눌러보세요.
+          br
+          span.subheading-kontakt 오픈 기념 SALE!!
+          p.text-kontakt
+            span.kontakt-label
+              | 커피레터 구입 및 우송료 10%할인!
             br
+            span.kontakt-label
+              del 3400원
+              |-> 
+              =default_price
+              |!!
             br
-            span.subheading-kontakt 도움이 필요하세요?
-            br
-              p.text-kontakt
-                span.kontakt-label 주소:
-                | 서울시 광진구 중곡동 166-44
-                br
-                span.kontakt-label 전화번호:
-                | 010-7154-0255
-                br
-                span.kontakt-label E-Mail:
-                | onesup.lee@gmail.com
+
+          span.subheading-kontakt 도움이 필요하세요?
+          br
+            p.text-kontakt
+              span.kontakt-label 주소:
+              | 서울시 광진구 중곡동 166-44
+              br
+              span.kontakt-label 전화번호:
+              | 010-7154-0255
+              br
+              span.kontakt-label E-Mail:
+              | onesup.lee@gmail.com
       .col-2
         = simple_form_for @letter do |f|
           = f.input :sender_name, label: "보내는 분 이름"
