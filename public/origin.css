@@ -586,7 +586,7 @@ span.kontakt-label {
     background-image: url(bg-01.jpg); }
 
 .no-cssanimations .bg-slideshow {
-  background-image: url(/assets/bg-01.jpg); }
+  background-image: url(bg-01.jpg); }
   .no-cssanimations .bg-slideshow li span {
     display: none; }
 
