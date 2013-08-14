@@ -7,6 +7,6 @@ html
     link href="origin.css" media="all" rel="stylesheet"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    = render 'layouts/google_analytics'
   body
    = yield
-   = render '/layouts/google_analytics'
