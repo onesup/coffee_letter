@@ -1,2 +1,8 @@
-h1 Admin::Billings#index
-p Find me in app/views/admin/billings/index.html.slim
+h1 결제 신청
+
+table
+  tr
+    th email
+  - @billings.each do |billing|
+    tr
+      td = billing.user.email unless billing.user.nil?

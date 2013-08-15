@@ -1,4 +1,5 @@
 class Admin::LettersController < ApplicationController
+  layout 'admin'
   def index
     @letters = Letter.all
 

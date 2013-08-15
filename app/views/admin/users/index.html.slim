@@ -1,0 +1,10 @@
+.container
+  h1 가입자 목록
+
+  table
+    tr
+      th email
+    - @users.each do |user|
+      tr
+        td = user.email
+        td = user.created_at

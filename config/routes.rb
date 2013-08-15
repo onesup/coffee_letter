@@ -1,5 +1,6 @@
 CoffeeLetter::Application.routes.draw do
 
+  get "users/index"
   get "dashboard/index"
 
   get "signup"  => "users#new", :as => "signup"
@@ -15,7 +16,8 @@ CoffeeLetter::Application.routes.draw do
   namespace :admin do
     resources :dashboard, only: [:index]
     resources :letters
-    resources :billings
+    resources :billings, except: [:destroy]
+    resources :users, except: [:destroy]
   end
 
   resources :users do

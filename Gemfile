@@ -25,7 +25,7 @@ group :development do
 end
 # in production environments by default.
 group :production do
-  gem 'rb-readline', '~> 0.4.2'
+  gem 'rb-readline', '~> 0.5.0'
 end
 
 
