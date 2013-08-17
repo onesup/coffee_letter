@@ -18,6 +18,7 @@ gem 'the_role', '~> 2.0.0'
 group :development do
   gem "pry"
   gem 'capistrano', github: "capistrano/capistrano"
+  gem 'guard-rails'
 end
 
 group :production do
@@ -27,9 +28,11 @@ end
 group :test do
   # gem 'cucumber-rails', :git => "git://github.com/cucumber/cucumber-rails.git", :branch => "master_rails4_test", :require => false
   gem 'factory_girl_rails'
-  # gem 'database_cleaner'
+  gem 'capybara'
+  gem 'guard-rails'
+  gem 'guard-rspec'
 end
 
 group :test, :development do
-  # gem 'rspec-rails'
+  gem 'rspec-rails'
 end

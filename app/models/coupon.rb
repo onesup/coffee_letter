@@ -23,8 +23,6 @@ class Coupon < ActiveRecord::Base
     result
   end
   
-  
-  
   def self.made_for(user)
     discount = 0.2
     if User.exists?(user)
