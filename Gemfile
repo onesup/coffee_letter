@@ -1,46 +1,35 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
 gem 'mysql2'
 gem 'unicorn'
-
-gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
-
+gem "sorcery", github: "NoamB/sorcery"
 gem 'slim-rails'
 gem 'haml2slim'
 gem 'slim'
 gem 'simple_form'
-gem "sorcery", :git => "git://github.com/NoamB/sorcery.git"
-
-# gem 'protected_attributes'
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
 gem 'the_role', '~> 2.0.0'
+
 group :development do
   gem "pry"
-  gem 'capistrano', :git => "git://github.com/capistrano/capistrano.git"
+  gem 'capistrano', github: "capistrano/capistrano"
 end
-# in production environments by default.
+
 group :production do
   gem 'rb-readline', '~> 0.5.0'
 end
 
+group :test do
+  # gem 'cucumber-rails', :git => "git://github.com/cucumber/cucumber-rails.git", :branch => "master_rails4_test", :require => false
+  gem 'factory_girl_rails'
+  # gem 'database_cleaner'
+end
 
-gem 'sass-rails',   '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# To use debugger
-# gem 'debugger'
+group :test, :development do
+  # gem 'rspec-rails'
+end

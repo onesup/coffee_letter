@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810124534) do
+ActiveRecord::Schema.define(version: 20130817022039) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.datetime "updated_at"
   end
 
+  create_table "coupons", force: true do |t|
+    t.string   "code"
+    t.float    "discount"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "letters", force: true do |t|
     t.integer  "user_id"
     t.string   "email"
@@ -43,7 +52,7 @@ ActiveRecord::Schema.define(version: 20130810124534) do
     t.string   "receiver_name"
     t.string   "receiver_phone"
     t.string   "receiver_address"
-    t.string   "content"
+    t.text     "content",          limit: 255
     t.string   "express"
     t.boolean  "is_public"
     t.integer  "like_count"
