@@ -3,23 +3,30 @@ class Coupon < ActiveRecord::Base
 
   #published, used, new
 
-  #주인이 있는 쿠폰입니다. 
-  def can_use_for?(user)
-    unless self.status == "used"
-      result = TRUE
-    else
-      result = FALSE
-    end
-
-    if result and self.user == nil
-      result = TRUE
-    elsif User.exists?(self.user)
-      if user == self.user
-        result = TRUE
-      else
-        result = self.user.id
+  #쿠폰 사용 약관에 "회원 탈퇴 시 쿠폰또한 삭제됩니다. 라고 명시해야함."
+  def self.valid?(code, user=nil)
+    if self.exists?(:code => code)
+      coupons = self.where(:code => code)
+      coupon = coupons.first
+      if coupon.user.nil? and coupon.status != "used"
+        result = true
+      elsif coupon.user.nil? and coupon.status == "used"
+        result = false
+      elsif coupon.user.class == User and coupon.status != "used"
+        result = coupon.can_use_for?(user)
       end
     end
+    result
+  end
+  
+  def can_use_for?(user)
+    if self.status != "used" && self.user.email == user.email
+      result = true
+    elsif self.status != "used" && self.user.email != user.email
+      result = self.user.id
+    elsif self.status == "used"
+      result = false
+    end    
     result
   end
   

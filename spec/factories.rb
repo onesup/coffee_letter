@@ -18,7 +18,6 @@ FactoryGirl.define do
   factory :coupon do
     code Coupon.random_code
     trait :published_to_anonymous do
-      
     end
     trait :published_to_user1 do
       association :user, :user1
