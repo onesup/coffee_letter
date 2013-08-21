@@ -1,5 +1,6 @@
 #encoding: utf-8
 class LettersController < ApplicationController
+  before_filter :store_location
   # GET /letters
   # GET /letters.json
   def index
@@ -43,11 +44,11 @@ class LettersController < ApplicationController
     @letter = Letter.new(letter_params)    
     respond_to do |format|
       if @letter.save
-        billing = Billing.create()
+        billing = Billing.create(product: p)
         billing.letters << @letter
         billing.save
         if @letter.controller_name == 'main'
-          format.html { redirect_to edit_letter_path(@letter) }
+          format.html { redirect_to edit_user_letter_path(current_user, @letter) }
         else
           format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
           format.json { render json: @letter, status: :created, location: @letter }

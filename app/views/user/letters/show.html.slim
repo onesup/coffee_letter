@@ -1,0 +1,33 @@
+.container
+  .jumbotron
+    h1 편지 쓰기 마지막 단계!
+    p 
+      |  받는 분 성함과 주소를 다시 한 번 확인 부탁드려요. 전할 이야기도 한 번 다시 확인해보시구요. 혹시 주소가 틀리다면 저희가 전화로 다시 여쭤볼께요. 보내시는 분 성함과 전화번호도 확인 부탁드려요^^
+  ul.list-group
+    li.list-group-item
+      dl
+        dt 받는 분 이름
+        dd = @letter.receiver_name
+    li.list-group-item
+      dl
+        dt 받는 분 주소
+        dd = @letter.receiver_address
+    li.list-group-item
+      dl
+        dt 전할 이야기
+        dd = @letter.content
+    li.list-group-item
+      dl
+        dt 보내는 분 이름
+        dd = @letter.sender_name
+    li.list-group-item
+      dl
+        dt 보내는 분 주소
+        dd = @letter.sender_address
+  ul.nav class="nav-pills"
+    li.active
+      = link_to '우표 붙이기!', edit_user_billing_path(@user, @letter.billing)
+    li
+      = link_to '다시 고치기!', edit_user_letter_path(@user, @letter)
+    / li
+    /   = link_to '일단 저장하고 다음에 보내기^^7', edit_letter_path(@letter)

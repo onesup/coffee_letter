@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817022039) do
+ActiveRecord::Schema.define(version: 20130818195454) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130817022039) do
     t.string   "sender_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "product_id"
   end
 
   create_table "coupons", force: true do |t|
@@ -58,6 +59,14 @@ ActiveRecord::Schema.define(version: 20130817022039) do
     t.integer  "like_count"
     t.integer  "paper_id"
     t.integer  "billing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "title"
+    t.integer  "price"
+    t.float    "discount_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

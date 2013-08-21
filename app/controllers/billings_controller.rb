@@ -37,7 +37,7 @@ class BillingsController < ApplicationController
 
   # GET /billings/1/edit
   def edit
-    @letter = Letter.find(params[:id])
+    # @letter = Letter.find(params[:id])
     redirect_to edit_user_billing_path(current_user.id, @letter.id)
   end
 

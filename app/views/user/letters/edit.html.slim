@@ -1,2 +1,10 @@
-h1 User::Letters#edit
-p Find me in app/views/user/letters/edit.html.slim
+/! Fixed navbar
+.container
+  /! Main component for a primary marketing message or call to action
+  .jumbotron
+    h1 편지 보내기 2단계
+    p 
+      | 편지를 보내는 데 필요한 나머지를 알려주세요. 친구에게 보내는 편지가 잘 도착하기 위해서 필요합니다. 우편번호 필요없이 주소만 적어주시면, 우편번호는 저희가 찾아드릴께요 ^^
+    / p
+    /   a.btn.btn-large.btn-primary href="../../docs/#navbar"
+  = render 'form'
