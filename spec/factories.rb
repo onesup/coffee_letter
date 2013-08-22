@@ -7,6 +7,7 @@ FactoryGirl.define do
     
     trait :user1 do
       email "user1@gmail.com"
+      password "1111"
     end
     
     trait :user2 do
