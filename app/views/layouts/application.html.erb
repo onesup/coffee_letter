@@ -7,6 +7,16 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <%=favicon_link_tag 'touch-icon-iphone.png',        rel: 'apple-touch-icon', type: 'image/png'%>
+  <%=favicon_link_tag 'touch-icon-ipad.png',          rel: 'apple-touch-icon', type: 'image/png', sizes: "72x72"%>
+  <%=favicon_link_tag 'touch-icon-iphone-retina.png', rel: 'apple-touch-icon', type: 'image/png', sizes: "114x114"%>
+  <%=favicon_link_tag 'touch-icon-ipad-retina.png',   rel: 'apple-touch-icon', type: 'image/png', sizes: "144x144"%>
+
+  <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
   <meta property="og:title" content="커피레터" />
   <meta property="og:site_name" content="커피레터" />
   <meta property="og:description" content="커피로 전하는 아날로그 기프티콘" />

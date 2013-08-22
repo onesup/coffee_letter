@@ -5,6 +5,11 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     title CoffeeLetter
     link href="origin.css" media="all" rel="stylesheet"
+    = favicon_link_tag 'touch-icon-iphone.png',        rel: 'apple-touch-icon', type: 'image/png'
+    = favicon_link_tag 'touch-icon-ipad.png',          rel: 'apple-touch-icon', type: 'image/png', sizes: "72x72"
+    = favicon_link_tag 'touch-icon-iphone-retina.png', rel: 'apple-touch-icon', type: 'image/png', sizes: "114x114"
+    = favicon_link_tag 'touch-icon-ipad-retina.png',   rel: 'apple-touch-icon', type: 'image/png', sizes: "144x144"
+    
     = javascript_include_tag "application"
     = csrf_meta_tags
     = render 'layouts/google_analytics'

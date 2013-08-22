@@ -18,11 +18,12 @@
         td = letter.sender_phone
         td = letter.receiver_name
         td = letter.receiver_address
-        td = letter.content
+        td = letter.content[0..90]
 
         td = letter.created_at
         td = link_to 'Show', admin_letter_path(letter)
         td = link_to 'Edit', edit_admin_letter_path(letter)
+
 
   br
 

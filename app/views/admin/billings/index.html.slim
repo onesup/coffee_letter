@@ -5,4 +5,4 @@ table
     th email
   - @billings.each do |billing|
     tr
-      td = billing.user.email
+      td = billing.user.email unless billing.user.nil?
