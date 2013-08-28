@@ -1,2 +1,52 @@
-h1 Admin::Letters#show
-p Find me in app/views/admin/letters/show.html.slim
+h1=@letter.sender_name
+ul
+  -unless @letter.user.nil?
+    li
+      dl
+        dt 보내는 사람 이메일
+        dd=@letter.user.email
+  li
+    dl
+      dt 보내는 사람
+      dd=@letter.sender_name
+  li
+    dl
+      dt 보내는 사람 주소
+      dd=@letter.sender_address
+  li
+    dl
+      dt 받는 사람
+      dd=@letter.receiver_name
+  li
+    dl
+      dt 받는 사람 주소
+      dd=@letter.receiver_address
+  li
+    dl
+      dt 편지 내용
+      dd=@letter.content
+  li
+    dl
+      dt 입금자 이름
+      dd=@letter.billing.sender_name
+  li
+    dl
+      dt 등기 여부
+      dd=@letter.express
+  li
+    dl
+      dt 공개 편지 여부
+      dd=@letter.is_public
+  li
+    dl
+      dt 좋아요 갯수
+      dd=@letter.like_count
+  li
+    dl
+      dt 편지 쓴 날짜
+      dd=@letter.created_at
+  li
+    dl
+      dt 편지 고친 날짜
+      dd=@letter.updated_at
+  
