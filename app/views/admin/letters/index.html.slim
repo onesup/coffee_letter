@@ -10,8 +10,8 @@
 
     - @letters.each do |letter|
       tr
-        td = link_to letter.sender_name, letter
-        td = link_to letter.receiver_name, letter
-        td = link_to letter.receiver_address, letter
+        td = link_to letter.sender_name, admin_letter_path(letter)
+        td = link_to letter.receiver_name, admin_letter_path(letter)
+        td = link_to letter.receiver_address, admin_letter_path(letter)
 
-        td = link_to letter.created_at, letter
+        td = link_to letter.created_at, admin_letter_path(letter)
