@@ -9,12 +9,16 @@ feature "user order" do
     visit root_path
     fill_in "letter_sender_name", with: "이원섭"
     click_on "submit"
+    Letter.last.sender_name.should eq("이원섭")
+    Letter.last.billing.sender_name.should eq("이원섭")
+    Letter.last.billing.product.title.should eq("default_product")
+    expect(page).to have_text("2단계")
+    click_on "submit"
+    expect(page).to have_text("로그인")
     find(".login").fill_in "email", with: 'user1@gmail.com', :match => :prefer_exact
     find(".login").fill_in "password", with: '1111', :match => :prefer_exact
     find(".login").click_on "로그인", :match => :prefer_exact
-    puts"***"
-    puts Billing.last.user.nil?
-    puts"***"
+    Billing.last.user.should be
     Billing.last.user.email.should eq("user1@gmail.com")
     # expect(page).to have_text("2단계")
   end

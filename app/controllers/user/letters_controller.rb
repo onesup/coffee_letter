@@ -60,6 +60,11 @@ class User::LettersController < ApplicationController
   def show
     @user = current_user
     @letter = Letter.find(params[:id])
+    if @letter.billing.user.nil?
+      billing = @letter.billing
+      billing.user = @user
+      billing.save
+    end
   end
   
   private  

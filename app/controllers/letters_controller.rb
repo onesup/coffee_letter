@@ -44,11 +44,9 @@ class LettersController < ApplicationController
     @letter = Letter.new(letter_params)    
     respond_to do |format|
       if @letter.save
-        billing = Billing.create(product: p)
-        billing.letters << @letter
-        billing.save
         if @letter.controller_name == 'main'
-          format.html { redirect_to edit_user_letter_path(current_user, @letter) }
+          # format.html { redirect_to edit_user_letter_path(current_user, @letter) }
+          format.html { redirect_to edit_letter_path(@letter) }
         else
           format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
           format.json { render json: @letter, status: :created, location: @letter }
@@ -67,7 +65,8 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.update_attributes(letter_params)
-        format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
+        # format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
+        format.html { redirect_to user_letter_path(current_user, @letter), notice: '편지가 작성되었습니다.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

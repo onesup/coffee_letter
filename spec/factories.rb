@@ -18,13 +18,35 @@ FactoryGirl.define do
   
   factory :coupon do
     code Coupon.random_code
+
     trait :published_to_anonymous do
     end
+
     trait :published_to_user1 do
       association :user, :user1
     end
+
     trait :published_to_user2 do
       association :user, :user2
+    end
+  end
+
+  factory :letter do
+    trait :letter_from_user1 do
+      association :user, :user1
+    end
+
+    trait :letter_from_이원섭 do
+      sender_name "이원섭"
+    end
+    
+    trait :letter_from_anonymous do
+    end
+  end
+  
+  factory :billing do
+    trait :billing_to_anonymous do
+      association :letter, :letter_from_anonymous
     end
   end
   
