@@ -41,6 +41,7 @@ FactoryGirl.define do
     end
     
     trait :letter_from_anonymous do
+      sender_name "아무개"
     end
   end
   
