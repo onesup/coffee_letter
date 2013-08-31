@@ -14,13 +14,12 @@ class User::BillingsController < ApplicationController
   def edit
     @user = User.find(params[:user_id])
     @billing = Billing.find(params[:id])
-    @letter = @billing.letters.first
   end
   
   def show
     @user = User.find(params[:user_id])
     @billing = Billing.find(params[:id])
-    @letter = @billing.letters.first
+    @letter = @billing.letter
   end
   
   def update
@@ -39,7 +38,7 @@ class User::BillingsController < ApplicationController
   private
   
     def billing_params
-      params.require(:billing).permit(:sender_name)
+      params.require(:billing).permit(:sender_name, :sender_phone) 
     end
   
 end

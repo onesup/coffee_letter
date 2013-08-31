@@ -12,7 +12,7 @@ ul
   li
     dl
       dt 보내는 사람 전화번호
-      dd=@letter.sender_phone
+      dd=@letter.billing.sender_phone
   li
     dl
       dt 보내는 사람 주소
@@ -28,7 +28,7 @@ ul
   li
     dl
       dt 편지 내용
-      dd=@letter.content
+      dd=simple_format @letter.content
   li
     dl
       dt 입금자 이름

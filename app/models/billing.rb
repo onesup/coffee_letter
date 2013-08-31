@@ -1,10 +1,12 @@
 class Billing < ActiveRecord::Base
-  has_many :letters
+  has_one :letter
   belongs_to :product
   belongs_to :user
-  accepts_nested_attributes_for :letters
+  accepts_nested_attributes_for :letter
   
   before_create :billing_has_default_product
+  
+  
   
   private
     def create_or_find_default_product

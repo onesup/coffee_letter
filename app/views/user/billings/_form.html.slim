@@ -1,9 +1,8 @@
-.panel
-  = simple_form_for [@user, @billing] do |f|
-    = f.simple_fields_for :letters do |letter_form|
-      .form-group
-        = letter_form.input :sender_phone, label: "입금 확인 문자 받을 전화번호", input_html: {class: "form-control", value: @user.phone}
+= simple_form_for [@user, @billing] do |f|
+  .panel
     .form-group
-      = f.input :sender_name, label: "입금자 성명", input_html: {class: "form-control", value: @letter.sender_name}
+      = f.input :sender_phone, label: "입금 확인 문자 받을 전화번호", input_html: {class: "form-control", value: (@user.phone if nil), id: "letter_sender_phone"}
     .form-group
-      = f.submit '신청 완료', class: "form-control btn btn-default"
+      = f.input :sender_name, label: "입금자 성명", input_html: {class: "form-control", value: (@user.name if nil)}
+    .form-group
+      = f.submit '신청 완료', class: "form-control btn btn-default", id: "submit"

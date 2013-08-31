@@ -26,7 +26,7 @@
         dd = @letter.sender_address
   ul.nav class="nav-pills"
     li.active
-      = link_to '우표 붙이기!', edit_user_billing_path(@user, @letter.billing)
+      = link_to '우표 붙이기!', edit_user_billing_path(@user, @letter.billing), id: "submit"
     li
       = link_to '다시 고치기!', edit_user_letter_path(@user, @letter)
     / li

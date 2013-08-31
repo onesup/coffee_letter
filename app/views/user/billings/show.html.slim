@@ -17,13 +17,11 @@
     li.list-group-item
       dl
         dt 받는 분 이름
-        dd =@letter.receiver_name
+        dd =@billing.letter.receiver_name
     li.list-group-item
       dl
         dt 받는 분 주소
-        dd =@letter.receiver_address
+        dd =@billing.letter.receiver_address
   ul.nav class="nav-pills"
     li.active
       = link_to '한장 더!', new_user_letter_path(current_user)
-    / li
-    /   = link_to '잠깐만요, 고칠 게 있어요!', edit_letter_path(@letter)
