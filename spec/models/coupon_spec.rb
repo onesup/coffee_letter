@@ -34,4 +34,11 @@ describe "Coupon" do
     Coupon.valid?(coupon.code, user1).should be_kind_of Fixnum
   end
   
+  it "을 쓰게 되면 결제가격에 적용" do
+    coupon = FactoryGirl.create(:coupon, :published_to_user1)
+    billing = FactoryGirl.create(:billing, :default)
+    coupon_activated_billing = billing.activate_coupon(coupon)
+    coupon_activated_billing.total_price = 3400 - (3400 * 0.3)
+  end
+  
 end

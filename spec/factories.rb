@@ -46,8 +46,11 @@ FactoryGirl.define do
   end
   
   factory :billing do
+    association :letter, :letter_from_anonymous
     trait :billing_to_anonymous do
-      association :letter, :letter_from_anonymous
+      
+    end
+    trait :default do
     end
   end
   

@@ -6,7 +6,10 @@ class Billing < ActiveRecord::Base
   
   before_create :billing_has_default_product
   
-  
+  def activate_coupon(coupon)
+    self.coupon = coupon
+    self.save
+  end
   
   private
     def create_or_find_default_product
