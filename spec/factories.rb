@@ -54,4 +54,20 @@ FactoryGirl.define do
     end
   end
   
+  factory :product do
+    title "default_product"
+    price 3400
+    trait :discount_thirty_percent do
+      discount_value 0.3
+    end
+    
+    trait :discount_five_hundred_won_sale do
+      discount_value 500
+    end
+    
+    trait :no_discount do
+      discount_value nil
+    end
+  end
+  
 end
