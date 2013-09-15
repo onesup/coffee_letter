@@ -18,6 +18,8 @@ CoffeeLetter::Application.routes.draw do
     resources :letters
     resources :billings, except: [:destroy]
     resources :users, except: [:destroy]
+    resources :coupons, except: [:destroy]
+    resources :products, except: [:destroy]
   end
 
   resources :users do

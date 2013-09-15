@@ -29,6 +29,19 @@ FactoryGirl.define do
     trait :published_to_user2 do
       association :user, :user2
     end
+    
+    trait :discount_thirty_percent do
+      discount_value 0.3
+    end
+    
+    trait :discount_five_hundred_won_sale do
+      discount_value 500
+    end
+    
+    trait :no_discount do
+      discount_value nil
+    end
+    
   end
 
   factory :letter do

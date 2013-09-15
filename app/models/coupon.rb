@@ -1,6 +1,6 @@
 class Coupon < ActiveRecord::Base
   belongs_to :user
-
+  has_one :billing
   #published, used, new
 
   #쿠폰 사용 약관에 "회원 탈퇴 시 쿠폰또한 삭제됩니다. 라고 명시해야함."
@@ -33,10 +33,10 @@ class Coupon < ActiveRecord::Base
   def self.made_for(user)
     discount = 0.2
     if User.exists?(user)
-      coupon = Coupon.create(:status => "published", :code => Coupon.random_code, :discount => discount)
+      coupon = Coupon.create(:status => "published", :code => Coupon.random_code, :discount_value => discount)
       user.coupons << coupon
     else
-      Coupon.create(:status => "new", :code => Coupon.random_code, :discount => discount)
+      Coupon.create(:status => "new", :code => Coupon.random_code, :discount_value => discount)
     end
   end
 

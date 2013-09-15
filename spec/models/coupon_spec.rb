@@ -37,8 +37,29 @@ describe "Coupon" do
   it "을 쓰게 되면 결제가격에 적용" do
     coupon = FactoryGirl.create(:coupon, :published_to_user1)
     billing = FactoryGirl.create(:billing, :default)
-    coupon_activated_billing = billing.activate_coupon(coupon)
-    coupon_activated_billing.total_price = 3400 - (3400 * 0.3)
+    billing.activate_coupon(coupon)
+    billing.total_price.should eql(3060)
+  end
+
+  it "이 30% 할인 가격일 때 billing에 적용" do
+    coupon = FactoryGirl.create(:coupon, :discount_thirty_percent)
+    letter = FactoryGirl.create(:letter, :letter_from_anonymous)
+    letter.billing.activate_coupon(coupon)
+    letter.billing.total_price.should eql(2040)
+
+  end  
+  it "이 500원 할인 가격일 때 billing에 적용" do
+    coupon = FactoryGirl.create(:coupon, :discount_five_hundred_won_sale)
+    letter = FactoryGirl.create(:letter, :letter_from_anonymous)
+    letter.billing.activate_coupon(coupon)
+    letter.billing.total_price.should eql(2560)
+  end
+  
+  it "이 할인하지 않을 때 billing에 적용" do
+    coupon = FactoryGirl.create(:coupon, :no_discount)
+    letter = FactoryGirl.create(:letter, :letter_from_anonymous)
+    letter.billing.activate_coupon(coupon)
+    letter.billing.total_price.should eql(3060)
   end
   
 end

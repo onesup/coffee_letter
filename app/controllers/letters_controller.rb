@@ -41,6 +41,7 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     
+    
     @letter = Letter.new(letter_params)    
     respond_to do |format|
       if @letter.save
